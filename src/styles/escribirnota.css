@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.escribir-nota-container {
+    background-color: #f7f7f7; /* Fondo claro para la página */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: 40px auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+}
+
+.back-button,
+.save-button {
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    color: #007bff; /* Color azul */
+    cursor: pointer;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.back-button:hover,
+.save-button:hover {
+    color: #0056b3; /* Color al pasar el mouse */
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+input:focus, textarea:focus {
+    border: 1px solid #007bff; /* Color de borde al enfocar */
+    outline: none; /* Sin contorno */
+}
+
+textarea {
+    min-height: 200px; /* Altura mínima para el textarea */
+}
