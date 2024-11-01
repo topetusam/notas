@@ -1,7 +1,7 @@
 const express = require('express');
 const indexRouter = require('./api/views/indexRouter.js'); 
-const noteRouter = require('./api/router/noteRouter.js');
-const userRouter = require('./api/router/userRouter.js');
+const noteRouter = require('./api/router/noteRouters.js');
+const userRouter = require('./api/router/userRouters.js');
 const error = require('./api/middleware/errorHandler.js');
 const session = require('./api/middleware/sessionConfig.js');
 const auth = require('./api/middleware/decodedJWT.js')
@@ -38,8 +38,8 @@ app.get('*', (req, res) => {
 });
 
 // Cargar certificado y clave privada
-const privateKey = fs.readFileSync('./private.key');
-const certificate = fs.readFileSync('./certificate.crt');
+const privateKey = fs.readFileSync('./key.pem');
+const certificate = fs.readFileSync('./cert.pem');
 
 // Crear servidor HTTPS
 const httpsServer = https.createServer({
